@@ -7,7 +7,7 @@ const symbolsEl = document.getElementById('symbols')
 const generateEl = document.getElementById('generate')
 const clipboardEl = document.getElementById('clipboard')
 
-const randomFunc = {
+const randomFuncion = {
     lower: getRandomLower,
     upper: getRandomUpper,
     number: getRandomNumber,
@@ -45,7 +45,7 @@ function generatePassword(lower, upper, number, symbol, length) {
     for(let i = 0; i < length; i += typesCount) {
         typesArr.forEach(type => {
             const funcName = Object.keys(type)[0]
-            generatedPassword += randomFunc[funcName]()
+            generatedPassword += randomFuncion[funcName]()
         })
     }
 
